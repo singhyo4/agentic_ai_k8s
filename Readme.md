@@ -20,7 +20,7 @@ Before running this project, ensure you have the following:
 
 1. **Clone the Repository**
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/singhyo4/agentic_ai_k8s.git
    cd k8sagentic_ai
    ```
 
