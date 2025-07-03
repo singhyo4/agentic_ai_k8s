@@ -1,5 +1,8 @@
 # Agentic AI for Kubernetes
 
+![K8s Agent Architecture](images/agentic-k8s-architecture.png)
+
+
 ## Prerequisites
 
 Before running this project, ensure you have the following:

@@ -1,0 +1,12 @@
+flowchart TD
+    User("User") --> UI("AI Agent UI")
+    UI --> Agent("AI Agent<br/>(Kubernetes)")
+    Agent -- "Send context for troubleshooting" --> LLM("LLM Agent")
+    LLM -- "Troubleshooting solution and suggest action to taken by agent" --> Agent
+    Agent -- "Respond with solution" --> UI
+    UI -- "Show solution to user" --> User
+
+    style User fill:#cde4ff,stroke:#6699ff,stroke-width:2px
+    style UI fill:#cde4ff,stroke:#6699ff,stroke-width:2px
+    style Agent fill:#d5e8d4,stroke:#82b366,stroke-width:2px
+    style LLM fill:#e1d5e7,stroke:#9673a6,stroke-width:2px
