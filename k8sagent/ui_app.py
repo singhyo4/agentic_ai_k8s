@@ -31,3 +31,13 @@ if st.button("Check Cluster Health"):
                 if st.button(f"Restart {pod['name']}"):
                     restart_pod(pod["namespace"], pod["name"])
                     st.success(f"🔁 Restarted {pod['name']}")
+
+pods_input = st.text_area("Paste pod info (JSON list):")
+if st.button("Analyze"):
+    import json
+    try:
+        pods = json.loads(pods_input)
+        result = analyze_issues(pods)
+        st.write(result)
+    except Exception as e:
+        st.error(f"Error: {e}")
