@@ -5,13 +5,13 @@ metadata:
   namespace: k8sgpt-operator-system
 spec:
   ai:
-    enabled: true
+    enabled: false
     secret:
       name: k8sgpt-sample-secret
       key: azure-api-key
     model: gpt-4o-mini
     backend: azureopenai
-    baseUrl: https://yogeshtestaiopen.openai.azure.com
+    baseUrl: https://yogeshtestaiopen.openai.azure.com/
     engine: llm
   analysis:
     interval: "1m"  # Set analysis interval to 5 minutes

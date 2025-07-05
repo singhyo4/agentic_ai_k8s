@@ -5,6 +5,13 @@ metadata:
   namespace: k8sgpt-operator-system
 spec:
   ai:
+    # autoRemediation:
+    # enabled: true
+    # similarityRequirement: "90"
+    # resources:
+    #   - Pod
+    #   - Service
+    #   - Deployment
     enabled: false
     backend: localai
     baseUrl: http://ollama.ollama.svc.cluster.local:11434

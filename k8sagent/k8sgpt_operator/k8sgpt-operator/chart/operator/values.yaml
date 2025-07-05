@@ -3,10 +3,10 @@ interplex:
   enabled: false
 
 serviceMonitor:
-  enabled: false
+  enabled: true
   additionalLabels: {}
   # The namespace where Prometheus expects to find the serviceMonitor
-  # namespace: ""
+  namespace: prometheus
 grafanaDashboard:
   enabled: false
   # The namespace where Grafana expects to find the dashboard
