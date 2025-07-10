@@ -2,6 +2,7 @@ apiVersion: core.k8sgpt.ai/v1alpha1
 kind: K8sGPT
 metadata:
   name: k8sgpt-auto-remediation-sample
+  namespace: k8sgpt-operator-system
 spec:
   ai:
     autoRemediation:
@@ -11,14 +12,14 @@ spec:
         - Pod
         - Service
         - Deployment
-    enabled: true
-    model: gpt-4o-mini
-    backend: openai
-    secret:
-      name: k8sgpt-sample-secret
-      key: openai-api-key
+    enabled: false
+    model: llama2
+    backend: localai
+    # secret:
+    #   name: k8sgpt-sample-secret
+    #   key: openai-api-key
     # anonymized: false
-    # language: english
+    language: english
   noCache: false
   repository: ghcr.io/k8sgpt-ai/k8sgpt
   version: v0.4.1

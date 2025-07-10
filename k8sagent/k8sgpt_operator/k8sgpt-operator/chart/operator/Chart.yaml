@@ -19,5 +19,5 @@ appVersion: 0.0.26
 dependencies:
   - name: interplex
     version: 1.0.0
-    repository: https://charts.k8sgpt.ai/
+ #   repository: https://charts.k8sgpt.ai/
     condition: interplex.enabled

@@ -63,3 +63,8 @@ Before running this project, ensure you have the following:
 - The `.env` file is ignored by git for security.
 - Make sure your Azure OpenAI deployment name matches the one you set up in Azure.
 - The script will analyze failed pods in your AKS cluster and provide recommendations using Azure OpenAI.
+
+
+# K8sGPT deployment
+
+## step by step deployment of k8sgpt with Grafana 

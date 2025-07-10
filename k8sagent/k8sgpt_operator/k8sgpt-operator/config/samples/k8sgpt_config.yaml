@@ -1,0 +1,12 @@
+ai:
+    providers:
+    - name: azureopenai
+      model: gpt-4o-mini      # you can use any model but I found gpt-4o-mini to be ok for my testing
+      baseurl: https://yogeshtestaiopen.openai.azure.com
+      engine: gpt-4o-mini
+      password:  # your OpenAI API key goes here
+    - name: localai
+      model: llama2
+      baseurl: http://127.0.0.1:11434
+    defaultprovider: "localai"
+~                                

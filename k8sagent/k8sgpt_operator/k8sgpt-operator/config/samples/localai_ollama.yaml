@@ -2,22 +2,25 @@ apiVersion: core.k8sgpt.ai/v1alpha1
 kind: K8sGPT
 metadata:
   name: k8sgpt-local
-  namespace: k8sgpt-operator-system
+  namespace: k8sgpt
 spec:
   ai:
-    # autoRemediation:
-    # enabled: true
-    # similarityRequirement: "90"
-    # resources:
-    #   - Pod
-    #   - Service
-    #   - Deployment
+    autoRemediation:
+      enabled: true
+      similarityRequirement: "90"
+      resources:
+        - Pod
+        - Service
+        - Deployment
+        - Storage
+        - ConfigMap
+        - Security
     enabled: false
     backend: localai
     baseUrl: http://ollama.ollama.svc.cluster.local:11434
     model: llama2
     language: english
   analysis:
-    interval: "5m"  # Set analysis interval to 5 minutes
+    interval: "1m"  # Set analysis interval to 5 minutes
   noCache: false
   version: v0.3.41
