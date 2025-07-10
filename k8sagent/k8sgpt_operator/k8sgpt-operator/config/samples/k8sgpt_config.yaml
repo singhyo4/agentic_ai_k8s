@@ -5,8 +5,8 @@ ai:
       baseurl: https://yogeshtestaiopen.openai.azure.com
       engine: gpt-4o-mini
       password:  # your OpenAI API key goes here
-    - name: localai
+    - name: ollama
       model: llama2
       baseurl: http://127.0.0.1:11434
-    defaultprovider: "localai"
+    defaultprovider: "ollama"
 ~                                
