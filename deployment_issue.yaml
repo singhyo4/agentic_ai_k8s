@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: failing-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: failing-app
+  template:
+    metadata:
+      labels:
+        app: failing-app
+    spec:
+      containers:
+      - name: failing-container
+        image: nginx:latest  # Replace with an image that will quickly exit
+        command: ["/bin/sh", "-c", "exit 1"]  # This command will cause the container to exit with an error code
